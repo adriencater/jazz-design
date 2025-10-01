@@ -42,7 +42,24 @@ h1 { letter-spacing: -0.012em; }
 :root{
 	--jazz-bleu: hsl(210, 90%, 62%);
 	--jazz-bleu-dark: hsl(210, 90%, 30%);
+
+
+	/* / // /// //// ///// */
+	/* BONUS */
+
+	/* HSL séparé */
+	--jb-h: 210;
+	--jb-s: 90%;
+	--jb-l: 62%;
+
+	/* couleur calculé */
+	--jazz-bleu-light: hsl(
+        var(--jb-h),
+        calc(var(--jb-s) - 20%),
+        calc(var(--jb-l) + 10%)
+      );  
 }
 
+
 body { color: var(--jazz-bleu-dark); }
-h1 { color: var(--jazz-bleu); }
+h1 { color: var(--jazz-bleu-light); }
