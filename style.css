@@ -11,15 +11,20 @@ body {
 /* Taille */
 /* Font Scale */
 :root{
-	--size-sm: clamp(0.83rem, 0.02vi + 0.83rem, 0.84rem);
-	--size-base: clamp(1rem, 0.23vi + 0.94rem, 1.13rem);
-	--size-md: clamp(1.2rem, 0.54vi + 1.06rem, 1.5rem);
-	--size-lg: clamp(1.44rem, 1.02vi + 1.19rem, 2rem);
-	--size-xl: clamp(1.73rem, 1.7vi + 1.3rem, 2.66rem);
-	--size-xxl: clamp(2.07rem, 2.69vi + 1.4rem, 3.55rem);
-	--size-xxxl: clamp(2.49rem, 4.08vi + 1.47rem, 4.73rem);
+	--size-xxs: clamp(0.51rem, -0.06vi + 0.52rem, 0.47rem);
+	--size-xs: clamp(0.61rem, 0.05vi + 0.59rem, 0.63rem);
+	--size-sm: clamp(0.73rem, 0.23vi + 0.67rem, 0.84rem);
+	--size-base: clamp(0.88rem, 0.5vi + 0.75rem, 1.13rem);
+	--size-md: clamp(1.05rem, 0.9vi + 0.83rem, 1.5rem);
+	--size-lg: clamp(1.26rem, 1.48vi + 0.89rem, 2rem);
+	--size-xl: clamp(1.51rem, 2.31vi + 0.94rem, 2.66rem);
+	--size-xxl: clamp(1.81rem, 3.48vi + 0.95rem, 3.55rem);
+	--size-xxxl: clamp(2.18rem, 5.12vi + 0.9rem, 4.73rem);
 }
-/* https://www.fluid-type-scale.com/calculate?minFontSize=16&minWidth=400&minRatio=1.2&maxFontSize=18&maxWidth=1280&maxRatio=1.333&steps=sm%2Cbase%2Cmd%2Clg%2Cxl%2Cxxl%2Cxxxl&baseStep=base&prefix=size&useContainerWidth=false&includeFallbacks=false&useRems=true&remValue=16&decimals=2&previewFont=Inter&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground&previewWidth=977 */
+/* https://www.fluid-type-scale.com/calculate?minFontSize=14&minWidth=400&minRatio=1.2&maxFontSize=18&maxWidth=1200&maxRatio=1.333&steps=xxs%2Cxs%2Csm%2Cbase%2Cmd%2Clg%2Cxl%2Cxxl%2Cxxxl&baseStep=base&prefix=size&useContainerWidth=false&includeFallbacks=false&useRems=true&remValue=16&decimals=2&previewFont=Inter&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground&previewWidth=400 */
+
+.xxxl{ font-size: var(--size-xxxl); }
+
 
 body{ font-size: var(--size-base); }
 
@@ -40,26 +45,18 @@ h1 { letter-spacing: -0.012em; }
 
 /* Couleur */
 :root{
+
+	/* --variables */
 	--jazz-bleu: hsl(210, 90%, 62%);
 	--jazz-bleu-dark: hsl(210, 90%, 30%);
-
-
-	/* / // /// //// ///// */
-	/* BONUS */
-
-	/* HSL séparé */
-	--jb-h: 210;
-	--jb-s: 90%;
-	--jb-l: 62%;
-
-	/* couleur calculé */
-	--jazz-bleu-light: hsl(
-        var(--jb-h),
-        calc(var(--jb-s) - 20%),
-        calc(var(--jb-l) + 10%)
-      );  
 }
 
-
 body { color: var(--jazz-bleu-dark); }
-h1 { color: var(--jazz-bleu-light); }
+h1 { color: var(--jazz-bleu); }
+
+
+/* Mise en page */
+img { max-width: 100%; }
+
+#Affiche { height: 300px; }
+#Parasol { width: 4rem; }
